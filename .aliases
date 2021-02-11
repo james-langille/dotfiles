@@ -1,0 +1,33 @@
+alias addalias="vi ~/.aliases && source ~/.aliases"
+alias dvp="docker volume prune -f"
+alias dps="docker ps"
+alias dp="docker pull"
+alias dr="docker run --rm -it"
+alias x="exit"
+alias c="clear"
+
+alias portainer="open http://localhost:9000/#/containers"
+
+alias glol="git log --graph --decorate --oneline"
+alias glolv="git log --graph --decorate --oneline --show-signature"
+alias glov="git log --decorate --oneline --show-signature"
+alias g-="git checkout -"
+alias grbmi="git rebase master -i"
+
+function _history() {
+    cmd="$1"
+    print -s "$cmd"
+    echo "$fg[purple]^ $cmd$reset_color" 1>&2
+}
+
+function v() {
+    cmd="vi $(fzf -m -d ' ')"
+    _history "$cmd"
+    zsh -c "$cmd"
+}
+
+alias wrngrok="ngrok http 192.168.64.1:40519"
+alias gcad='git commit --amend --author="James Langille <james.langille@shopify.com>" --date="$(date -R)"'
+
+alias staging="git branch -f staging && git push -f origin staging:staging"
+alias server="tmux attach -t server"
