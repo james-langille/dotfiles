@@ -16,6 +16,6 @@ cp "$dot/.vimrc" $HOME
 cp "$dot/.aliases" $HOME
 cp "$dot/.zshrc" $HOME
 cp "$dot/.tmux.conf" $HOME
-cp "$dot/.gitconfig" $HOME
+#cp "$dot/.gitconfig" $HOME
 cp "$dot/.gitignore" $HOME
 

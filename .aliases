@@ -31,3 +31,4 @@ alias gcad='git commit --amend --author="James Langille <james.langille@shopify.
 
 alias staging="git branch -f staging && git push -f origin staging:staging"
 alias server="tmux attach -t server"
+alias prepare="bin/style --include-branch-commits && bin/test --include-branch-commits"
